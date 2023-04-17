@@ -1,0 +1,19 @@
+{
+  "name": "get-signed-url",
+  "version": "1.0.0",
+  "description": "Local workaround for Cloud Storage Signed Url",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "functions-framework --target=getSignedUrl --function-signature-type=http",
+    "deploy": "gcloud functions deploy FUNCTION_NAME --project PROJECT_ID --entry-point getSignedUrl --runtime nodejs16 --trigger-http --allow-unauthenticated"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^6.9.5"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^3.2.0"
+  }
+}
